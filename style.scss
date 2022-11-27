@@ -8,28 +8,49 @@ section{
     display: flex;
     justify-content: center;
 }
+.exercise {
+    border: 1px solid $color-primary;
+    
+        .exercise-title {
+            color: $color-tertiary;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: $color-secondary;
+        }
+    }
+
+    @mixin article-card ($color: $color-secondary, $border-color: $color-tertiary, $font-size: 1rem){
+        color: $color;
+        border: 1px solid $border-color;
+        font-size: $font-size;
+        text-align: center;   
+       
+    }
+
 article{
     border: 1px solid $color-tertiary;
     width: 25%;
     height: 100px; 
-    text-align: center;
-    &.article-style-1{
-        color: $color-secondary;
-    }
-    &.article-style-2{
-        color: $color-primary;
-    }
-
-
-}
-.exercise {
-border: 1px solid $color-primary;
-
-    .exercise-title {
-        color: $color-tertiary;
-        text-align: center;
-        text-decoration: underline;
-        text-decoration-color: $color-secondary;
-    }
     
+    &.style-1{
+            @include article-card();
+   
+    }
+    &.style-2{
+        @include article-card($color: $color-primary);
+      
+    }
+    &.style-3{
+        @include article-card($color: $color-tertiary, $border-color: $color-secondary);
+        flex-grow: 1;
+     
+     }
+   
 }
+
+
+
+
+
+
+

@@ -5,19 +5,6 @@ section {
   justify-content: center;
 }
 
-article {
-  border: 1px solid green;
-  width: 25%;
-  height: 100px;
-  text-align: center;
-}
-article.article-style-1 {
-  color: blue;
-}
-article.article-style-2 {
-  color: red;
-}
-
 .exercise {
   border: 1px solid red;
 }
@@ -26,6 +13,31 @@ article.article-style-2 {
   text-align: center;
   text-decoration: underline;
   text-decoration-color: blue;
+}
+
+article {
+  border: 1px solid green;
+  width: 25%;
+  height: 100px;
+}
+article.style-1 {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+  text-align: center;
+}
+article.style-2 {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+  text-align: center;
+}
+article.style-3 {
+  color: green;
+  border: 1px solid blue;
+  font-size: 1rem;
+  text-align: center;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
