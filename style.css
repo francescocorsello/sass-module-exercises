@@ -1,0 +1,43 @@
+section {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.exercise {
+  border: 0.0625pxrem solid red;
+}
+.exercise .exercise-title {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+article {
+  border: 1px solid green;
+  width: 25%;
+  height: 100px;
+}
+article.style-1 {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+  text-align: center;
+}
+article.style-2 {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+  text-align: center;
+}
+article.style-3 {
+  color: green;
+  border: 1px solid blue;
+  font-size: 1rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
