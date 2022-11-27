@@ -1,0 +1,31 @@
+section {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  border: 1px solid green;
+  width: 25%;
+  height: 100px;
+  text-align: center;
+}
+article.article-style-1 {
+  color: blue;
+}
+article.article-style-2 {
+  color: red;
+}
+
+.exercise {
+  border: 1px solid red;
+}
+.exercise .exercise-title {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
