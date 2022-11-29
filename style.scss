@@ -16,6 +16,11 @@ section{
             text-decoration: underline;
             text-decoration-color: variable.$color-secondary;
         }
+        .exercise-subtitle {
+            color: variable.$color-tertiary;
+            text-align: center;
+            text-decoration-color: variable.$color-secondary;
+        }
     }
 
     @mixin article-card ($color: variable.$color-secondary, $border-color: variable.$color-tertiary, $font-size: variable.$font-size){
