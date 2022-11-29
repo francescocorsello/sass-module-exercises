@@ -1,3 +1,8 @@
+article, .exercise .exercise-subtitle > h2, .exercise > h1 {
+  color: green;
+  text-align: center;
+}
+
 section {
   padding: 1rem;
   position: relative;
@@ -9,7 +14,7 @@ section {
   border: 0.0625rem solid red;
   justify-content: center;
 }
-.exercise .exercise-title {
+.exercise > h1 {
   color: green;
   text-align: center;
   text-decoration: underline;
@@ -42,21 +47,19 @@ article {
 article.style-1 {
   color: blue;
   border: 0.0625rem solid green;
-  font-size: 1rem;
   text-align: center;
 }
 article.style-2 {
   color: red;
   border: 0.0625rem solid green;
-  font-size: 1rem;
   text-align: center;
 }
 article.style-3 {
+  font-size: 1.5rem;
   color: green;
   border: 0.0625rem solid blue;
-  font-size: 1rem;
   text-align: center;
-  flex-grow: 1;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
