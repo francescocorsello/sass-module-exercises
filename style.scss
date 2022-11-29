@@ -1,0 +1,74 @@
+@use "variable.scss";
+@use "myFunction.scss";
+
+
+%text {
+    color: variable.$color-tertiary;
+    text-align: center;
+     }
+section{
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.exercise {
+    border: myFunction.remCon(variable.$border-size) solid variable.$color-primary;
+        justify-content: center;
+       
+        >h1 {
+            @extend %text;
+            color: variable.$color-tertiary;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: variable.$color-secondary;
+        }
+        .exercise-subtitle-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            flex-grow: 1;
+            align-content: center;     
+        }
+        .exercise-subtitle { 
+            border: myFunction.remCon(variable.$border-size) solid variable.$color-primary;  
+            padding: .2rem;
+            > h2{
+                @extend %text;
+                color: variable.$color-tertiary;
+                text-align: center;
+                text-decoration-color: variable.$color-secondary;
+            }
+        }
+    }
+
+    @mixin article-card ($color: variable.$color-secondary, $border-color: variable.$color-tertiary, $font-size: variable.$font-size){
+        color: $color;
+        border: myFunction.remCon(variable.$border-size) solid $border-color;
+        text-align: center;   
+      
+    }
+
+article{
+    border: myFunction.remCon(variable.$border-size) solid variable.$color-tertiary;
+    width: 25%;
+    height: 100px; 
+    @extend %text;
+     
+    &.style-1{
+            @include article-card();
+   
+    }
+    &.style-2{
+        @include article-card($color: variable.$color-primary);
+      
+    }
+    &.style-3{  
+        font-size: myFunction.remCon(variable.$footer-font-size);
+        @include article-card($color: variable.$color-tertiary, $border-color: variable.$color-secondary);
+        width: 100%;
+    }
+   
+}
