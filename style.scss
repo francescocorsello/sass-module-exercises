@@ -43,6 +43,7 @@ article{
     &.style-3{
         @include article-card($color: $color-tertiary, $border-color: $color-secondary);
         flex-grow: 1;
+        font-size: 24px;
      
      }
    
