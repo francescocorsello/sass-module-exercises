@@ -1,0 +1,48 @@
+@use "variable.scss";
+@use "myFunction.scss";
+
+section{
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.exercise {
+    border: myFunction.remCon(variable.$border-size) solid variable.$color-primary;
+    
+        .exercise-title {
+            color: variable.$color-tertiary;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: variable.$color-secondary;
+        }
+    }
+
+    @mixin article-card ($color: variable.$color-secondary, $border-color: variable.$color-tertiary, $font-size: variable.$font-size){
+        color: $color;
+        border: variable.$border-size solid $border-color;
+        font-size: $font-size;
+        text-align: center;   
+       
+    }
+
+article{
+    border: variable.$border-size solid variable.$color-tertiary;
+    width: 25%;
+    height: 100px; 
+    
+    &.style-1{
+            @include article-card();
+   
+    }
+    &.style-2{
+        @include article-card($color: variable.$color-primary);
+      
+    }
+    &.style-3{
+        @include article-card($color: variable.$color-tertiary, $border-color: variable.$color-secondary);
+        flex-grow: 1;
+     
+     }
+   
+}
