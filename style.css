@@ -9,12 +9,6 @@ section {
   border: 0.0625rem solid red;
   justify-content: center;
 }
-.exercise .exercise-title-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-grow: 1;
-}
 .exercise .exercise-title {
   color: green;
   text-align: center;

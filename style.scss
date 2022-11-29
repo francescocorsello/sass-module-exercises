@@ -10,13 +10,7 @@ section{
 .exercise {
     border: myFunction.remCon(variable.$border-size) solid variable.$color-primary;
         justify-content: center;
-    
-        .exercise-title-container{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            flex-grow: 1;
-        }
+       
         .exercise-title {
             color: variable.$color-tertiary;
             text-align: center;
