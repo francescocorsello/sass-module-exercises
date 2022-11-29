@@ -9,13 +9,39 @@ section{
 }
 .exercise {
     border: myFunction.remCon(variable.$border-size) solid variable.$color-primary;
+        justify-content: center;
     
+        .exercise-title-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-grow: 1;
+        }
         .exercise-title {
             color: variable.$color-tertiary;
             text-align: center;
             text-decoration: underline;
             text-decoration-color: variable.$color-secondary;
         }
+        .exercise-subtitle-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            flex-grow: 1;
+            align-content: center;     
+        }
+        .exercise-subtitle { 
+            border: myFunction.remCon(variable.$border-size) solid variable.$color-primary;  
+            padding: .2rem;
+        }
+        .exercise-subtitle > h2{
+            color: variable.$color-tertiary;
+            text-align: center;
+            text-decoration-color: variable.$color-secondary;
+        }
+
     }
 
     @mixin article-card ($color: variable.$color-secondary, $border-color: variable.$color-tertiary, $font-size: variable.$font-size){
@@ -42,7 +68,7 @@ article{
     &.style-3{
         @include article-card($color: variable.$color-tertiary, $border-color: variable.$color-secondary);
         flex-grow: 1;
-     
+       
      }
    
 }

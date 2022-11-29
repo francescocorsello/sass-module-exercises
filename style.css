@@ -7,11 +7,36 @@ section {
 
 .exercise {
   border: 0.0625rem solid red;
+  justify-content: center;
+}
+.exercise .exercise-title-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
 }
 .exercise .exercise-title {
   color: green;
   text-align: center;
   text-decoration: underline;
+  text-decoration-color: blue;
+}
+.exercise .exercise-subtitle-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex-grow: 1;
+  align-content: center;
+}
+.exercise .exercise-subtitle {
+  border: 0.0625rem solid red;
+  padding: 0.2rem;
+}
+.exercise .exercise-subtitle > h2 {
+  color: green;
+  text-align: center;
   text-decoration-color: blue;
 }
 
