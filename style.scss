@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "variable.scss";
 @use "myFunctions.scss";
 
@@ -6,10 +7,10 @@
     text-align: center;
      }
 section{
-    
-    position: relative;
-    display: flex;
-    justify-content: center; 
+    padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .exercise {
     border: myFunctions.remCon(variable.$border-size) solid variable.$color-primary;
@@ -75,15 +76,49 @@ article{
     #section-fs{
        
         justify-content: space-between;
-        >div{
-            width: myFunctions.remCon(45);
-            height: myFunctions.remCon(45);
-            // border: myFunctions.remCon(variable.$border-size) solid variable.$color-primary; 
-        }
-        
-      
-    }
-    
-    @for $var from 1 through 20{
 
+        @for $var from 1 to 20 {
+            :nth-child(#{$var}) {
+                background-color: color.adjust(white, $lightness: -5%*$var);
+                //background-color:  aqua;
+                 color: color.adjust(black, $lightness: +5%*$var);
+                   }
+                   @if $var == 10 {
+                    :nth-child(#{$var}) {
+                        background-color: variable.$color-secondary;
+                        color:variable.$color-primary;
+                    }
+                }          
+            }
+
+
+        >div{
+            width: myFunctions.remCon(variable.$section-fs-style-font-size);
+            height: myFunctions.remCon(variable.$section-fs-style-font-size);
+            border: myFunctions.remCon(variable.$border-size) solid variable.$color-primary; 
+        
+            $sizes: 1rem, 2rem, 3rem;
+            @each $size in $sizes {
+            @if $size == 1rem {
+                &.fs-1rem {
+                font-size: 1rem;
+                }
+            }
+            @else if $size == 2rem {
+                &.fs-2rem {
+                font-size: 2rem;
+                }
+            }
+            @else {
+                &.fs-3rem {
+                font-size: 3rem;
+                }
+                }
+            }
+
+        } 
     }
+        
+ 
+    
+ 
